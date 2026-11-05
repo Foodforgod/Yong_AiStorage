@@ -26,6 +26,8 @@
 ## 🌟 Key Application Features
 
 ### 📁 Storage & Folder Hierarchy
+<img width="1915" height="1027" alt="image" src="https://github.com/user-attachments/assets/67c4763f-23d7-46ee-9931-5408f9964d24" />
+
 * **Nested Directory Structures**: Unlimited sub-directory nesting using parent-child relational mappings (`parent_id`).
 * **Breadcrumb Navigation**: Path indicators across nested folder trees.
 * **Grid & List Displays**: Dynamic visual switching for file and folder views.
@@ -38,6 +40,8 @@
 * **Output Escaping**: Protection against Cross-Site Scripting (XSS) using contextual UTF-8 HTML entity encoding (`e()`).
 
 ### 🔄 Advanced File Services
+<img width="1912" height="1092" alt="image" src="https://github.com/user-attachments/assets/760e2ed9-5b47-4b19-aace-6fa6eba41a9b" />
+
 * **Revision Control & Rollbacks**: Automatic version incrementing (`file_versions`) when uploading files with matching names.
 * **Public Link Sharing**: Tokenized sharing links with standalone public view controllers (`public_share.php?token=...`).
 * **Soft Deletion & Lifecycle Management**: Trash recovery bin (`is_deleted = 1`) with options to perform granular restorations or permanent physical storage purges.
