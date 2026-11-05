@@ -1,0 +1,106 @@
+:root {
+    --cv-primary: #4f46e5;
+    --cv-primary-hover: #4338ca;
+    --cv-sidebar-bg: #0f172a;
+    --cv-sidebar-color: #94a3b8;
+    --cv-sidebar-active: #ffffff;
+    --cv-bg-light: #f8fafc;
+    --cv-border-color: #e2e8f0;
+    --cv-card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cv-bg-light);
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+#sidebar {
+    width: 260px;
+    background-color: var(--cv-sidebar-bg);
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#sidebar .brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#sidebar .nav-link {
+    color: var(--cv-sidebar-color);
+    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+#sidebar .nav-link:hover, #sidebar .nav-link.active {
+    color: var(--cv-sidebar-active);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+#sidebar .nav-link i {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+#main-content {
+    margin-left: 260px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.top-navbar {
+    background: var(--cv-card-bg);
+    border-bottom: 1px solid var(--cv-border-color);
+    padding: 0.75rem 2rem;
+    margin-left: 260px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.cv-card {
+    background: var(--cv-card-bg);
+    border: 1px solid var(--cv-border-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.storage-meter {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 1.25rem;
+}
+
+@media (max-width: 992px) {
+    #sidebar {
+        margin-left: -260px;
+    }
+    #sidebar.show {
+        margin-left: 0;
+    }
+    #main-content, .top-navbar {
+        margin-left: 0;
+    }
+}
